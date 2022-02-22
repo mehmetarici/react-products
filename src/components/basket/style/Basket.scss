@@ -1,0 +1,26 @@
+.basket-popover {
+    position: relative;
+
+    .basket-list {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        right: 0;
+        top: 42px;
+        transform: translate(0, 16px);
+        background-color: #FFFFFF;
+        border: 1px solid #B0B0B0;
+        padding: 21px;
+        width: auto;
+    }
+
+    &:hover {
+        .basket-list {
+            z-index: 10;
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, 11px);
+            transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+        }
+    }
+}

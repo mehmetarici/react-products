@@ -1,0 +1,14 @@
+.radio-button-input {
+    display: none;
+
+    &:checked + .radio-button-label {
+        color: #FF6000;
+    }
+}
+
+.radio-button-label {
+    color: #646464;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    padding: 18px 5rem;
+
+    .logo {
+        width: 10rem;
+    }
+
+    .search {
+        position: relative;
+
+
+        svg {
+            position: absolute;
+            top: 16px;
+            left: 20px;
+        }
+
+        input {
+            max-width: 520px;
+            min-width: 420px;
+            background: #EEEEEE;
+            border-radius: 100px;
+            border: none;
+            padding: 16px 48px;
+            outline: none;
+            font-size: 15px;
+            color: #252525;
+
+            &:hover, &:focus {
+                outline: 1px solid #FF6000;
+            }
+        }
+    }
+
+}

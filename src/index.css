@@ -1,6 +1,26 @@
 body {
     margin: 0;
-    font-family: 'Roboto', 'Oxygen', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #B0B0B0;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #B0B0B0;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #B0B0B0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }

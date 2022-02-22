@@ -1,8 +1,16 @@
+import { Navbar } from "./components";
+import { Home } from "./pages";
+
 import './App.scss';
 
 function App() {
     return (
-        <div>App</div>
+        <div className="app">
+            <Navbar/>
+            <div className="routes">
+                <Home/>
+            </div>
+        </div>
     );
 }
 

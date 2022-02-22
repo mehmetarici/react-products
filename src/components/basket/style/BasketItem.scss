@@ -1,0 +1,48 @@
+.basket-item {
+    min-width: 340px;
+    margin-bottom: 20px;
+    display: flex;
+
+    .product-image {
+        width: 54px;
+        padding: 7px;
+        border: 1px solid #E5E5E5;
+        margin-right: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .product-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .product-title {
+            h2 {
+                font-size: 12px;
+                font-weight: normal;
+                color: #484848;
+            }
+        }
+
+        .product-action {
+            button {
+                background: #FFFFFF;
+                border: 1px solid #F90000;
+                border-radius: 4px;
+                color: #F90000;
+                padding: 4px 8px;
+                font-size: 12px;
+
+                &:hover {
+                    background: #F90000;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+    }
+
+}

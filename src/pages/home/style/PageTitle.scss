@@ -1,0 +1,36 @@
+.page-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+
+    .title {
+        h1 {
+            font-weight: bold;
+            font-size: 28px;
+            color: #484848
+        }
+
+        h4 {
+            color: #484848;
+            font-weight: normal;
+            font-size: 15px;
+
+            span {
+                color: #B0B0B0;
+            }
+        }
+    }
+
+    .sort-select {
+        select {
+            outline: 1px solid #B4B4BB;
+            border: 12px solid transparent;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-size: 17px;
+            color: #B0B0B0;
+        }
+    }
+
+}

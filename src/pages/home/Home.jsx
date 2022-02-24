@@ -1,5 +1,8 @@
 import PageTitle from "./PageTitle";
 import FilterSidebar from "./FilterSidebar";
+import { ProductList } from "../../components";
+
+import "./style/Home.scss"
 
 function Home() {
     return (
@@ -8,6 +11,7 @@ function Home() {
 
             <div className="page-content">
                 <FilterSidebar/>
+                <ProductList />
             </div>
         </div>
     );

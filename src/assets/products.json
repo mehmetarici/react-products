@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "name": "Iphone 11",
+        "imageName": "sample-product-1.png",
+        "category": "Telefon",
+        "brand": "Apple",
+        "color": "Siyah",
+        "stockCount": 4,
+        "inBasket": true,
+        "createdAt": "2022-01-17T03:24:00",
+        "amount": {
+            "currency": "TL",
+            "original": 9085,
+            "discounted": 7035.42,
+            "discountRatePercentage": 12
+        }
+    },
+    {
+        "id": 2,
+        "name": "Oppo Realme C25S",
+        "imageName": "sample-product-2.png",
+        "category": "Telefon",
+        "brand": "Oppo",
+        "color": "Beyaz",
+        "stockCount": 2,
+        "inBasket": false,
+        "createdAt": "2022-01-01T10:30:00",
+        "amount": {
+            "currency": "TL",
+            "original": 3185,
+            "discounted": 3089.45,
+            "discountRatePercentage": 3
+        }
+    },
+    {
+        "id": 3,
+        "name": "Samsung Galaxy A32",
+        "imageName": "sample-product-3.png",
+        "category": "Telefon",
+        "brand": "Samsung",
+        "color": "Beyaz",
+        "stockCount": 1,
+        "inBasket": false,
+        "createdAt": "2022-02-10T14:00:00",
+        "amount": {
+            "currency": "TL",
+            "original": 4885,
+            "discounted": 6489.60,
+            "discountRatePercentage": 4
+        }
+    },
+    {
+        "id": 4,
+        "name": "Iphone 11 Kılıf",
+        "imageName": "sample-product-3.png",
+        "category": "Telefon Aksesuar",
+        "brand": "Apple",
+        "color": "Kırmızı",
+        "stockCount": 4,
+        "inBasket": false,
+        "createdAt": "2022-01-01T10:30:00",
+        "amount": {
+            "currency": "TL",
+            "original": 240,
+            "discounted": 216,
+            "discountRatePercentage": 10
+        }
+    }
+]

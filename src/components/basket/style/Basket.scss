@@ -6,7 +6,7 @@
         visibility: hidden;
         position: absolute;
         right: 0;
-        top: 42px;
+        top: 45px;
         transform: translate(0, 16px);
         background-color: #FFFFFF;
         border: 1px solid #B0B0B0;
@@ -14,13 +14,11 @@
         width: auto;
     }
 
-    &:hover {
-        .basket-list {
-            z-index: 10;
-            opacity: 1;
-            visibility: visible;
-            transform: translate(0, 11px);
-            transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
-        }
+    .basket-active {
+        z-index: 10;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
     }
 }

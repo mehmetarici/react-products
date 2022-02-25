@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./List.scss"
 
 List.propTypes = {
-    data: PropTypes.elementType.isRequired
+    data: PropTypes.array.isRequired
 }
 
 function List({data}) {

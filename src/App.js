@@ -1,16 +1,19 @@
-import { Navbar } from "./components";
-import { Home } from "./pages";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor, store } from "./redux";
+
+import AppRouter from "./AppRouter";
 
 import './App.scss';
 
 function App() {
     return (
-        <div className="app">
-            <Navbar/>
-            <div className="routes">
-                <Home/>
-            </div>
-        </div>
+        <Provider store={ store }>
+            <PersistGate loading={ null } persistor={ persistor }>
+                <AppRouter/>
+            </PersistGate>
+        </Provider>
+
     );
 }
 

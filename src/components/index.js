@@ -12,3 +12,5 @@ export {default as List} from "./list/List"
 export {default as ProductList} from "./product/ProductList"
 export {default as ProductItem} from "./product/ProductItem"
 export {default as ProductCard} from "./product/ProductCard"
+
+export {default as Modal} from "./modal/Modal"

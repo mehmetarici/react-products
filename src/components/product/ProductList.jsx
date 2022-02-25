@@ -2,10 +2,10 @@ import { ProductItem } from "../index";
 
 import "./style/ProductList.scss"
 
-function ProductList() {
+function ProductList({products}) {
     return (
         <div className="product-list">
-            <ProductItem/>
+            {products.map(product => <ProductItem key={product.id} product={product}/>)}
         </div>
     );
 }

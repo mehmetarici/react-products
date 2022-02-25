@@ -1,7 +1,7 @@
 .product-list {
     margin: 20px 0;
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(180px, 349.33px)) !important;
+    grid-template-columns: repeat(4, minmax(180px, 349.33px)) !important;
     grid-gap: 24px !important;
 
     .product-item {
@@ -93,6 +93,13 @@
 
                 &:hover {
                     outline: 1px solid #FF6000;
+                }
+
+                &:disabled {
+                    color: #B0B0B0;
+                    background: rgba(126, 126, 126, 0.11);
+                    outline: none;
+                    cursor: not-allowed;
                 }
             }
         }

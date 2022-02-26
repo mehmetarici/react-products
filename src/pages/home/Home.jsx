@@ -16,8 +16,9 @@ function Home() {
     useEffect(() => {
         const productColors = [];
         const productBrands = [];
-        console.log("asdas")
-        products.forEach(product => {
+
+        const storageProducts = JSON.parse(localStorage.getItem("products"));
+        storageProducts.forEach(product => {
             productColors.push(product.color)
             productBrands.push(product.brand)
         });

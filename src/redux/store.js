@@ -10,7 +10,7 @@ const persistConfig = {
     key: "root",
     version: 1,
     storage,
-    blacklist: [],
+    blacklist: ["productStore"],
     migrate: createMigrate(migrations, { debug: false }),
 };
 

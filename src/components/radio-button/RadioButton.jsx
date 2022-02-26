@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import PropTypes from 'prop-types';
 import "./RadioButton.scss"
 
@@ -9,10 +8,9 @@ RadioButton.propTypes = {
 }
 
 function RadioButton({id, value, label, onChange}) {
-    const {sortBy} = useSelector(state => state.productStore)
     return (
         <>
-            <input className="radio-button-input" type="radio" onChange={onChange} value={value} name="radio" id={id} checked={sortBy===value}/>
+            <input className="radio-button-input" type="radio" onChange={onChange} value={value} name="radio" id={id} />
             <label className="radio-button-label" htmlFor={id}>{label}</label>
         </>
     );

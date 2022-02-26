@@ -14,3 +14,5 @@ export {default as ProductItem} from "./product/ProductItem"
 export {default as ProductCard} from "./product/ProductCard"
 
 export {default as Modal} from "./modal/Modal"
+
+export {default as Pagination} from "./pagination/Pagination"

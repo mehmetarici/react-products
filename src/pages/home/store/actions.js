@@ -1,4 +1,13 @@
-import { ADD_TO_BASKET, DELETE_FROM_BASKET, SEARCH_PRODUCTS, SET_PRODUCTS, SORT_PRODUCTS } from "./actionTypes";
+import {
+    ADD_TO_BASKET,
+    DELETE_FROM_BASKET,
+    FILTER_BRAND_PRODUCTS,
+    FILTER_COLOR_PRODUCTS,
+    SEARCH_PRODUCTS,
+    SET_PAGINATION,
+    SET_PRODUCTS,
+    SORT_PRODUCTS
+} from "./actionTypes";
 
 export function setProducts(products) {
     return {
@@ -21,6 +30,20 @@ export function sortProducts(sortBy) {
     };
 }
 
+export function filterColorProducts(color) {
+    return {
+        type: FILTER_COLOR_PRODUCTS,
+        color
+    };
+}
+
+export function filterBrandProducts(brand) {
+    return {
+        type: FILTER_BRAND_PRODUCTS,
+        brand
+    };
+}
+
 export function addToBasket(productId) {
     return {
         type: ADD_TO_BASKET,
@@ -32,5 +55,12 @@ export function deleteFromBasket(productId) {
     return {
         type: DELETE_FROM_BASKET,
         productId
+    };
+}
+
+export function setPagination(pagination) {
+    return {
+        type: SET_PAGINATION,
+        pagination
     };
 }

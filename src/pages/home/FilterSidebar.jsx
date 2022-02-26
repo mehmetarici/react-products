@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { sortProducts } from "./store/actions";
+import { useDispatch } from "react-redux";
+import { filterBrandProducts, filterColorProducts, sortProducts } from "./store/actions";
 import { List, RadioButton } from "../../components";
 import "./style/FilterSidebar.scss"
 
 function FilterSidebar({filter}) {
-    const {sortBy} = useSelector(state => state.productStore)
     const dispatch = useDispatch();
 
     const [colors, setColors] = useState([]);
@@ -42,17 +41,25 @@ function FilterSidebar({filter}) {
         const brandOccurrences = filter.brands.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
 
         const colorButtons = [...colorOccurrences.entries()]
-            .map(([color, count]) => <RadioButton id={ color } label={ `${ color } (${ count })` } value={ color }/>);
+            .map(([color, count]) => <RadioButton onChange={ () => _filterColorProducts(color) } id={ color } label={ `${ color } (${ count })` } value={ color }/>);
         setColors(colorButtons)
 
         const brandButtons = [...brandOccurrences.entries()]
-            .map(([brand, count]) => <RadioButton id={ brand } label={ `${ brand } (${ count })` } value={ brand }/>);
+            .map(([brand, count]) => <RadioButton onChange={ () => _filterBrandProducts(brand) } id={ brand } label={ `${ brand } (${ count })` } value={ brand }/>);
         setBrands(brandButtons)
     }, [filter]);
 
     function _sortProducts(sortOption) {
-        if (sortOption && sortOption !== sortBy)
+        if (sortOption)
             dispatch(sortProducts(sortOption));
+    }
+
+    function _filterColorProducts(color) {
+        dispatch(filterColorProducts(color));
+    }
+
+    function _filterBrandProducts(brand) {
+        dispatch(filterBrandProducts(brand));
     }
 
     return (

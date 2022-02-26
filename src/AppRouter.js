@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { setProducts } from "./pages/home/store/actions";
+import { setPagination } from "./pages/home/store/actions";
 
 import { Home } from "./pages";
 import { Navbar } from "./components";
@@ -14,18 +14,17 @@ function App() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(setProducts(products))
+        localStorage.setItem("products", JSON.stringify(products));
+        dispatch(setPagination({size: 12, page: 0, pageCount: Math.ceil(products.length / 12)}))
 
     }, [dispatch]);
 
-    return (
-        <div className="app">
-            <Navbar/>
-            <div className="routes">
-                <Home/>
-            </div>
+    return (<div className="app">
+        <Navbar/>
+        <div className="routes">
+            <Home/>
         </div>
-    );
+    </div>);
 }
 
 export default App;

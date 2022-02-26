@@ -1,0 +1,27 @@
+.pagination {
+    display: flex;
+    align-items: center;
+
+    p {
+        background: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        box-sizing: border-box;
+        border-radius: 9px;
+        padding: 10px 16px;
+        margin: 4px;
+
+        font-size: 10px;
+        color: #646464;
+        cursor: pointer;
+
+        &:hover {
+            color: #FFFFFF;
+            background: #FF6000;
+        }
+    }
+
+    .active {
+        color: #FFFFFF;
+        background: #FF6000;
+    }
+}

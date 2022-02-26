@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCard /> renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="product"
+  >
+    <div
+      class="product-image"
+    >
+      <img
+        alt="Iphone 11 Kılıf"
+        src="sample-product-3.png"
+      />
+    </div>
+    <h2
+      class="product-title"
+    >
+      Iphone 11 Kılıf
+    </h2>
+    <div
+      class="product-info"
+    >
+      <span>
+        Marka: 
+        <span
+          class="product-info-value"
+        >
+          Apple
+        </span>
+      </span>
+      <span>
+        Renk: 
+        <span
+          class="product-info-value"
+        >
+          Kırmızı
+        </span>
+      </span>
+    </div>
+    <div
+      class="product-price"
+    >
+      <span
+        class="price"
+      >
+        216.00 TL
+      </span>
+      <div
+        class="discount"
+      >
+        <span
+          class="normal-price"
+        >
+          240.00 TL
+        </span>
+        <span
+          class="percentage"
+        >
+          10%
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

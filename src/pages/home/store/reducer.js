@@ -1,9 +1,13 @@
-import { ADD_TO_BASKET, DELETE_FROM_BASKET, SEARCH_PRODUCTS, SET_PRODUCTS, SORT_PRODUCTS } from "./actionTypes";
+import { ADD_TO_BASKET, DELETE_FROM_BASKET, FILTER_BRAND_PRODUCTS, FILTER_COLOR_PRODUCTS, SEARCH_PRODUCTS, SET_PAGINATION, SET_PRODUCTS, SORT_PRODUCTS } from "./actionTypes";
+import products from "../../../assets/products.json";
 
 const initialState = {
     products: [],
+    pagination: {size: 12, page: 0, pageCount: 3},
     searchText: null,
-    sortBy: null
+    sortBy: null,
+    filterColor: null,
+    filterBrand: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -23,6 +27,18 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 sortBy: action.sortBy
+            };
+
+        case FILTER_COLOR_PRODUCTS:
+            return {
+                ...state,
+                filterColor: action.color
+            };
+
+        case FILTER_BRAND_PRODUCTS:
+            return {
+                ...state,
+                filterBrand: action.brand
             };
 
         case ADD_TO_BASKET:
@@ -52,6 +68,14 @@ const reducer = (state = initialState, action) => {
                     ...state.products.slice(deletedProductIndex + 1),
                 ]
             };
+        case SET_PAGINATION:
+            const {size, page} = action.pagination;
+            const storageProducts = JSON.parse(localStorage.getItem("products"));
+            const paginatedProducts = storageProducts.slice(size * page, size * page + size)
+
+            return {
+                ...state, products: paginatedProducts, pagination: action.pagination
+            }
 
         default:
             return state;
